@@ -1,0 +1,24 @@
+:root {
+    --primary1: #F4B301;
+    --primary2: #2A2F35;
+    --secondary: #F7F7F7;
+    --white: #fff;
+    --footer: #3B4046;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+    
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 120rem;
+}
+
