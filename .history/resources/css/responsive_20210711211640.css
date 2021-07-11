@@ -90,9 +90,7 @@
         flex-wrap: wrap;
     }
 
-    .product-item {
-        width: calc(100% - 33.3%);
-    }
+
 
 }
 
@@ -117,14 +115,6 @@
         text-align: center;
     }
 
-    .about__avatar > img {
-        width: 20rem;
-        height: 20rem;
-    }
-
-    .product-item {
-        width: 100%;
-    }
 }
 
 /* Extra small devices (portrait phones, less than 576px) */
@@ -155,4 +145,8 @@
         top: 20rem;
     }
 
+    .product-item,
+    .product-img > img {
+        width: 46rem;
+    }
 }

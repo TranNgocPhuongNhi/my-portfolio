@@ -10,6 +10,11 @@
         width: 25rem;
         height: 25rem;
     }
+    
+    .product-item,
+    .product-img > img {
+        width: 36rem;
+    }
 
 }
 
@@ -20,6 +25,15 @@
 
     .about__avatar::before {
         left: 2rem;
+    }
+
+    .product-item,
+    .product-img > img {
+        width: 30rem;
+    }
+
+    .product-img > img {
+        height: 27rem;
     }
 
 }
@@ -79,7 +93,7 @@
     .about__me {
         width: 70vw;
         margin: 0;
-        padding: 8rem 4rem 0 8rem;
+        padding: 8rem 1rem 0 15rem;
         position: absolute;
         top: 0;
         bottom: 0;
@@ -90,10 +104,10 @@
         flex-wrap: wrap;
     }
 
-    .product-item {
-        width: calc(100% - 33.3%);
+    .product-item,
+    .product-img > img {
+        width: 50rem;
     }
-
 }
 
 /* Small devices (landscape phones, less than 768px) */
@@ -112,18 +126,15 @@
 
     .about__quote {
         width: 11rem;
-        top: 26rem;
         left: 1rem;
         text-align: center;
     }
 
     .about__avatar > img {
-        width: 20rem;
-        height: 20rem;
-    }
+        w
+        top: 10rem;
+        left: 2rem;
 
-    .product-item {
-        width: 100%;
     }
 }
 
@@ -142,17 +153,8 @@
         margin-left: 1rem;
     }
 
-    .about__avatar > img {
-        width: 15rem;
-        height: 15rem;
+    .product-item,
+    .product-img > img {
+        width: 46rem;
     }
-
-    .about__me {
-        padding-left: 5rem;
-    }
-
-    .about__quote {
-        top: 20rem;
-    }
-
 }

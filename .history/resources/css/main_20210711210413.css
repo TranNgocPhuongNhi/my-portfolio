@@ -259,8 +259,7 @@ a {
     font-family: 'Lora', Helvetica, sans-serif;
     line-height: 1.8;
     margin-bottom: 5rem;
-    text-overflow: ellipsis;
-    overflow: hidden;
+    height: 10rem;
 }
 
 .about__CV {
@@ -351,12 +350,12 @@ a {
 
 .product-item {
     display: block;
-    width: calc(100% / 2);
+    width: 38rem;
     height: 35rem;
     border-radius: 1rem;
     background-color: var(--white);
     margin: 0 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     box-shadow: 0 0.3rem 1.5rem rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
@@ -366,7 +365,7 @@ a {
 }
 
 .product-img > img{
-    width: 100%;
+    width: 38rem;
     height: 25rem;
     object-fit: fill;
     border-radius: 1rem;

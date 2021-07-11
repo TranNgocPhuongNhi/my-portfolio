@@ -91,7 +91,7 @@
     }
 
     .product-item {
-        width: calc(100% - 33.3%);
+        width: 100;
     }
 
 }

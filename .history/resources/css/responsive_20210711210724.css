@@ -10,6 +10,11 @@
         width: 25rem;
         height: 25rem;
     }
+    
+    .product-item,
+    .product-img > img {
+        width: 36rem;
+    }
 
 }
 
@@ -20,6 +25,15 @@
 
     .about__avatar::before {
         left: 2rem;
+    }
+
+    .product-item,
+    .product-img > img {
+        width: 30rem;
+    }
+
+    .product-img > img {
+        height: 27rem;
     }
 
 }
@@ -90,10 +104,10 @@
         flex-wrap: wrap;
     }
 
-    .product-item {
-        width: calc(100% - 33.3%);
+    .product-item,
+    .product-img > img {
+        width: 50rem;
     }
-
 }
 
 /* Small devices (landscape phones, less than 768px) */
@@ -112,7 +126,7 @@
 
     .about__quote {
         width: 11rem;
-        top: 26rem;
+        top: 25rem;
         left: 1rem;
         text-align: center;
     }
@@ -120,10 +134,6 @@
     .about__avatar > img {
         width: 20rem;
         height: 20rem;
-    }
-
-    .product-item {
-        width: 100%;
     }
 }
 
@@ -151,8 +161,8 @@
         padding-left: 5rem;
     }
 
-    .about__quote {
-        top: 20rem;
+    .product-item,
+    .product-img > img {
+        width: 46rem;
     }
-
 }

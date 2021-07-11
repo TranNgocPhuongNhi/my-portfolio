@@ -91,7 +91,7 @@
     }
 
     .product-item {
-        width: calc(100% - 33.3%);
+        width: 100%;
     }
 
 }
@@ -120,10 +120,6 @@
     .about__avatar > img {
         width: 20rem;
         height: 20rem;
-    }
-
-    .product-item {
-        width: 100%;
     }
 }
 

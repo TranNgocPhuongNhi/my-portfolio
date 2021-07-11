@@ -86,13 +86,9 @@
         right: 0;
     }
 
-    .products__content  {
+    /* .products__content  {
         flex-wrap: wrap;
-    }
-
-    .product-item {
-        width: calc(100% - 33.3%);
-    }
+    } */
 
 }
 
@@ -120,10 +116,6 @@
     .about__avatar > img {
         width: 20rem;
         height: 20rem;
-    }
-
-    .product-item {
-        width: 100%;
     }
 }
 
@@ -155,4 +147,8 @@
         top: 20rem;
     }
 
+    .product-item,
+    .product-img > img {
+        width: 46rem;
+    }
 }
