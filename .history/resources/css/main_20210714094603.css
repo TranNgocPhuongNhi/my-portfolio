@@ -345,13 +345,14 @@ a {
     flex-wrap: wrap;
     justify-content: center;
     position: relative;
+    /* overflow: hidden; */
     margin-top: 5rem;
     padding: 1rem 0;
 }
 
 .product-item {
     display: block;
-    min-width: calc(100% / 3);
+    width: calc(100% / 5);
     height: 35rem;
     border-radius: 1rem;
     background-color: var(--white);

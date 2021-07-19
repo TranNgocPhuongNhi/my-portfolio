@@ -343,15 +343,18 @@ a {
 .products__content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    position: relative;
+    justify-content: flex-start;
+    /* position: relative;
+    transform: translateX(50%); */
+    /* overflow: hidden; */
+    margin: 0 auto;
     margin-top: 5rem;
     padding: 1rem 0;
 }
 
 .product-item {
     display: block;
-    min-width: calc(100% / 3);
+    min-width: calc(100% / 5);
     height: 35rem;
     border-radius: 1rem;
     background-color: var(--white);
