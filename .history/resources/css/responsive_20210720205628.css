@@ -95,7 +95,8 @@
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
     .header__info {
-        padding: 10rem 3rem;
+        top: 10rem;
+        padding: 3rem;
     }
 
     .header__info-fullname {
@@ -127,6 +128,7 @@
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
     .header__info {
+        top: 10rem;
         padding: 3rem;
     }
 
@@ -135,7 +137,7 @@
     }
 
     .header__info-fullname {
-        font-size: 3rem;
+        font-size: 4rem;
         margin-left: 1rem;
     }
 
@@ -155,8 +157,8 @@
         width: 9rem;
     }
 
-    .about__CV {
-        padding: 2rem;
+    .about__text {
+        text-overflow: ellipsis;
     }
-}
 
+}

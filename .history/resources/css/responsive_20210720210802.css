@@ -126,16 +126,17 @@
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-    .header__info {
+    /* .header__info {
+        top: 10rem;
         padding: 3rem;
-    }
+    } */
 
     .header__info-name > span:first-child {
         font-size: 2.5rem;
     }
 
     .header__info-fullname {
-        font-size: 3rem;
+        font-size: 4rem;
         margin-left: 1rem;
     }
 
@@ -159,4 +160,3 @@
         padding: 2rem;
     }
 }
-

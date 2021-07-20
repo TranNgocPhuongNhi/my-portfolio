@@ -94,9 +94,10 @@
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
-    .header__info {
-        padding: 10rem 3rem;
-    }
+    /* .header__info {
+        top: 10rem;
+        padding: 3rem;
+    } */
 
     .header__info-fullname {
         font-size: 4.5rem;
@@ -126,16 +127,17 @@
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-    .header__info {
+    /* .header__info {
+        top: 10rem;
         padding: 3rem;
-    }
+    } */
 
     .header__info-name > span:first-child {
         font-size: 2.5rem;
     }
 
     .header__info-fullname {
-        font-size: 3rem;
+        font-size: 4rem;
         margin-left: 1rem;
     }
 
@@ -147,6 +149,7 @@
 
     .about__me {
         padding-left: 5rem;
+        margin-bottom: 1rem;
     }
 
     .about__quote {
@@ -158,5 +161,5 @@
     .about__CV {
         padding: 2rem;
     }
-}
 
+}

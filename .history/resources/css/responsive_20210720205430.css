@@ -64,7 +64,7 @@
     .about__avatar > img {
         border-radius: 50%;
         position: absolute;
-        top: 5rem;
+        top: 2rem;
         left: 2rem;
         z-index: 5;
     }
@@ -95,7 +95,8 @@
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
     .header__info {
-        padding: 10rem 3rem;
+        top: 10rem;
+        padding: 3rem;
     }
 
     .header__info-fullname {
@@ -108,7 +109,7 @@
 
     .about__quote {
         width: 11rem;
-        top: 18rem;
+        top: 26rem;
         left: 1rem;
         text-align: center;
         font-size: 1.2rem;
@@ -127,6 +128,7 @@
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
     .header__info {
+        top: 10rem;
         padding: 3rem;
     }
 
@@ -135,7 +137,7 @@
     }
 
     .header__info-fullname {
-        font-size: 3rem;
+        font-size: 4rem;
         margin-left: 1rem;
     }
 
@@ -150,13 +152,9 @@
     }
 
     .about__quote {
-        top: 12rem;
+        top: 16rem;
         left: 0;
         width: 9rem;
     }
 
-    .about__CV {
-        padding: 2rem;
-    }
 }
-

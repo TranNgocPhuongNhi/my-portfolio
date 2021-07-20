@@ -259,7 +259,9 @@ a {
     font-family: 'Lora', Helvetica, sans-serif;
     line-height: 1.8;
     margin-bottom: 5rem;
+    text-overflow: ellipsis;
     overflow: hidden;
+    white-space: nowrap;
 }
 
 .about__CV {
