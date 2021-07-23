@@ -51,56 +51,128 @@ $('.skill-item').circleProgress({fill: {gradient: ["#D17CF3", "#46C7FD"]}})
 });
 
 
-// ===================================== Products slide ==================================
-// const prev = document.querySelector('.btn-prev');
-// const next = document.querySelector('.btn-next');
-// const productItems = document.querySelectorAll('.product-item');
-// var itemPage = Math.ceil(productItems.length / 3);
-// var i=0;
-// var movePerItem = 104.7;
-// var m_320 = window.matchMedia("(min-width:320px) and (max-width:374px)");
-// var m_375 = window.matchMedia("(min-width:375px) and (max-width: 419px)");
-// var m_420 = window.matchMedia("(min-width:420px) and (max-width:520px)");
-// var m_521 = window.matchMedia("(min-width:521px) and (max-width:575px)");
-// var m_576 = window.matchMedia("(min-width:576px) and (max-width:767px)");
-// var m_768 = window.matchMedia("(min-width:767px) and (max-width:991px)");
-// var m_992 = window.matchMedia("(min-width:992px) and (max-width:1199px)");
-// if(m_320.matches){
-//     movePerItem = 105.305;
-// } else if(m_375.matches){
-//     movePerItem = 104.515;
-// }else if(m_420.matches){
-//     movePerItem = 103.8;
-// }else if(m_521.matches){
-//     movePerItem = 103.25;
-// }else if(m_576.matches){
-//     movePerItem = 103.05;
-// } else if(m_768.matches){
-//     movePerItem = 104.08;
-// } else if(m_992.matches){
-//     movePerItem = 105;
-// }
+// ===================================== Products Pagination ==================================
+const products_content = document.querySelector('.products__content');
+const numberPage = document.querySelector('.number-page');
+const btnPrev = document.getElementById('prev')
+const btnNext = document.getElementById('next')
 
-// next.addEventListener("click",() => {
-//     i = i + movePerItem;
-//     for(var item of productItems){
-//         if((i > 525) && (movePerItem == 104.08)){ i = 0}
-//         if((i > 420) && (movePerItem == 105 || movePerItem == 104.7)){ i = 0}
-//         var moveLength = "-" + i + "%";
-//         item.style.transform = `translateX(${moveLength})`;
-//     }
-// })
+const products = [
+  {
+    id: 1,
+    link: 'https://tranngocphuongnhi.github.io/helium/',
+    image: 'resources/img/bg-1.png',
+    title: 'Helium',
+  },
+  {
+    id: 2,
+    link: 'https://tranngocphuongnhi.github.io/find-house/',
+    image: 'resources/img/bg-2.png',
+    title: 'Find House',
+  },
 
-// prev.addEventListener("click",() => {
-//     i = i - movePerItem;
-//     if(i < 0){ i = 0}
-//     for(var item of productItems) {
-//         if(itemPage > 1){
-//             var moveLength = "-" + i + "%";
-//             item.style.transform = `translateX(${moveLength})`;
-//         }
-//     }
-// })
+]
+
+const itemPerPage = 6
+let currentPage = 1
+let start = 0
+let end = itemPerPage
+
+let totalPages = Math.ceil(products.length / itemPerPage)
+
+function getCurrentPage(currentPage) {
+  start = (currentPage - 1) * itemPerPage
+  end = currentPage * itemPerPage;
+}
+
+function renderProducts() {
+  html = ''
+  const content = products.map((item, index) => {
+      if(index >= start && index < end) {
+        html += '<a href="'+ item.link +'" class="product-item">'
+        html += '<div class="product-img">'
+        html += '<img src="'+ item.image +'" alt="img">'
+        html += '<h3>'+ item.title +'</h3>'
+        html += '</div>'
+        html += '<p class="product-name">'+ item.title +'</p>'
+        html += '</a>'
+          return html;
+      }
+  })
+  products_content.innerHTML = html;
+}
+renderProducts()
+renderListPage()
+
+function renderListPage() {
+  let html = '';
+  html += `<li class="pagination-item pagination-item--active">${1}</li>`
+  for(let i=2; i <= totalPages; i++) {
+    html += `<li class="pagination-item">${i}</li>`
+  }
+  numberPage.innerHTML = html;
+}
+
+function changePage() {
+  const currentPages = document.querySelectorAll('.number-page li')
+  for(let i = 0; i < currentPages.length; i++) {
+    currentPages[i].addEventListener('click', () => {
+      let value = i + 1
+      currentPage = value
+      $('.number-page li').removeClass('pagination-item--active')
+      currentPages[i].classList.add('pagination-item--active')
+      if(currentPage > 1 && currentPage < totalPages) {
+        btnPrev.classList.remove('btn-inactive')
+        btnNext.classList.remove('btn-inactive')
+      }
+      if(currentPage === 1) {
+        btnPrev.classList.add('btn-inactive')
+      }
+      if(currentPage === totalPages) {
+        btnNext.classList.add('btn-inactive')
+      }
+      if(currentPage === totalPages && btnPrev.classList.contains('btn-inactive')) {
+        btnPrev.classList.remove('btn-inactive')
+      }
+      if(currentPage === 1 && btnNext.classList.contains('btn-inactive')) {
+        btnNext.classList.remove('btn-inactive')
+      }
+      getCurrentPage(currentPage)
+      renderProducts()
+    })
+  }
+}
+changePage()
+
+btnNext.addEventListener('click', () => {
+  currentPage++
+  if(currentPage > totalPages) {
+      currentPage = totalPages;
+  }
+  if(currentPage === totalPages) {
+    btnNext.classList.add('btn-inactive')
+  }
+  btnPrev.classList.remove('btn-inactive')
+  $('.number-page li').removeClass('pagination-item--active')
+  $(`.number-page li:eq(${currentPage-1})`).addClass('pagination-item--active')
+  getCurrentPage(currentPage)
+  renderProducts()
+})
+
+btnPrev.addEventListener('click', () => {
+  currentPage--
+  if(currentPage <= 1) {
+      currentPage = 1;
+  }
+  if(currentPage === 1) {
+    btnPrev.classList.add('btn-inactive')
+  }
+  btnNext.classList.remove('btn-inactive')
+  $('.number-page li').removeClass('pagination-item--active')
+  $(`.number-page li:eq(${currentPage-1})`).addClass('pagination-item--active')
+  getCurrentPage(currentPage)
+  renderProducts()
+})
 
 
 // ============================================= Particles.js ==================================================
