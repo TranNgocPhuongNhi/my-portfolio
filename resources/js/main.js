@@ -20,12 +20,23 @@ window.addEventListener("scroll",() => {
     }
 })
 
-// ============================================= Animation for fullname ==================================================
-const fullname = document.querySelector('.header__info-fullname');
-// console.log(fullname)
-// fullname.forEach(fn => {
-//   console.log(fn)
-// })
+// ============================================= Auto Text for Specialize ==================================================
+const specialize = document.querySelector('#specialize');
+let idx = 1
+let text = 'Front End Developer'
+// let test = ['Front End Developer', 'UX/UI Designer']
+
+autoText()
+
+function autoText() {
+  // specialize.innerHTML = test[idx - 1]
+  specialize.innerHTML = text.slice(0, idx)
+  idx++;
+  if(idx > text.length) {
+    idx = 1
+  }
+  setTimeout(autoText, 100)
+}
 
 
 // =========================================== To the top ===================================
