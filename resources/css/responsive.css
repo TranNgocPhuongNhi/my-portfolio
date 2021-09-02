@@ -4,11 +4,6 @@
     .header__nav-content {
         margin: 0 3rem;
     }
-
-    .header__info-content {
-        left: 10rem;
-    }
-    
     
     .about__avatar > img,
     .about__avatar::before {
@@ -48,6 +43,7 @@
         display: block;
         background-color: var(--white);
         animation: topToDown 0.8s ease;
+        z-index: 99;
     }
 
     .header__nav-list .nav-item a {
@@ -57,8 +53,8 @@
     }
 
     .header__info-content {
-        left: 8rem;
-        top: 21rem;
+        left: 3rem;
+        top: 30%;
     }
 
     .header__info-name > span:first-child{
@@ -120,10 +116,6 @@
         font-size: 4.5rem;
     }
 
-    .header__info-more {
-        left: 40%;
-    }
-
     .about__quote {
         width: 11rem;
         top: 18rem;
@@ -144,16 +136,13 @@
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-    .header__info-content {
-        top: 25rem;
-    }
 
     .header__info-name > span:first-child {
-        font-size: 2.5rem;
+        font-size: 1.8rem;
     }
 
     .header__info-fullname {
-        font-size: 3rem;
+        font-size: 2.5rem;
         margin-left: 1rem;
     }
 
