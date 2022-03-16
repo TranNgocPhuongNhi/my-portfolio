@@ -21,22 +21,22 @@ window.addEventListener("scroll",() => {
 })
 
 // ============================================= Auto Text for Specialize ==================================================
-const specialize = document.querySelector('#specialize');
-let idx = 1
-let text = 'Front End Developer'
-// let test = ['Front End Developer', 'UX/UI Designer']
+// const specialize = document.querySelector('#specialize');
+// let idx = 1
+// let text = 'Front End Developer'
+// // let test = ['Front End Developer', 'UX/UI Designer']
 
-autoText()
+// autoText()
 
-function autoText() {
-  // specialize.innerHTML = test[idx - 1]
-  specialize.innerHTML = text.slice(0, idx)
-  idx++;
-  if(idx > text.length) {
-    idx = 1
-  }
-  setTimeout(autoText, 100)
-}
+// function autoText() {
+//   // specialize.innerHTML = test[idx - 1]
+//   specialize.innerHTML = text.slice(0, idx)
+//   idx++;
+//   if(idx > text.length) {
+//     idx = 1
+//   }
+//   setTimeout(autoText, 100)
+// }
 
 
 // =========================================== To the top ===================================
@@ -72,13 +72,13 @@ const products = [
   {
     id: 1,
     link: 'https://tranngocphuongnhi.github.io/helium/',
-    image: 'resources/img/bg-1.png',
+    image: './resources/img/helium.png',
     title: 'Helium',
   },
   {
     id: 2,
     link: 'https://tranngocphuongnhi.github.io/find-house/',
-    image: 'resources/img/bg-2.png',
+    image: './resources/img/find-house.png',
     title: 'Find House',
   },
 
@@ -103,7 +103,7 @@ function renderProducts() {
         html += '<a href="'+ item.link +'" class="product-item">'
         html += '<div class="product-img">'
         html += '<img src="'+ item.image +'" alt="img">'
-        html += '<h3>'+ item.title +'</h3>'
+        // html += '<h3>'+ item.title +'</h3>'
         html += '</div>'
         html += '<p class="product-name">'+ item.title +'</p>'
         html += '</a>'

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 :root {
     --primary1: #D17CF3;
     --primary2: #2A2F35;
@@ -149,8 +151,7 @@ a {
     left: 10rem;
 }
 
-.header__info-name,
-.header__info-specialize    {
+.header__info-name   {
     background: var(--linear-gradient1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -172,13 +173,14 @@ a {
 .header__info-specialize {
     line-height: 1.5;
     font-family: 'Lora', Helvetica, sans-serif;
+    color: var(--primary3);
 }
 
-.header__info-specialize p:first-child {
+/* .header__info-specialize p:first-child {
     font-size: 2rem;
-}
+} */
 
-.header__info-specialize p:last-child {
+.header__info-specialize p {
     font-size: 2.5rem;
     font-weight: bold;
     margin-left: 5rem;
@@ -425,7 +427,7 @@ a {
 }
 
 .product-name {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bold;
     margin-left: 1.5rem;
     margin-top: 1rem;
@@ -567,10 +569,17 @@ a {
 
 .contact-socials ul {
     margin-top: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.contact-socials ul li:first-child {
+    margin-right: 1.5rem;
 }
 
 .contact-socials ul li a {
     color: var(--primary3);
+    font-size: 3rem;
 }
 
 .contact-socials ul li a:hover {
@@ -663,3 +672,15 @@ a {
 		transform: translateY(4.8rem) scale(0.5);
 	}
 }
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }
