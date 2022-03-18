@@ -234,7 +234,8 @@ a {
 /* =========================================== ABOUT ME ====================================== */
 .about__content {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
     position: relative;
 }
 
